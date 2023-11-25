@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.7](https://github.com/netwatching/action.docker.push/compare/v2.0.6...v2.0.7) (2023-11-25)
+
+
+### Bug Fixes
+
+* Registry name ([22946ef](https://github.com/netwatching/action.docker.push/commit/22946ef777b6b4ac94743eca84e64da8d5d7f9df))
+
 ## [2.0.6](https://github.com/netwatching/action.docker.push/compare/v2.0.5...v2.0.6) (2023-11-25)
 
 
