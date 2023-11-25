@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.9](https://github.com/netwatching/action.docker.push/compare/v2.0.8...v2.0.9) (2023-11-25)
+
+
+### Bug Fixes
+
+* Add license file ([1bf82f6](https://github.com/netwatching/action.docker.push/commit/1bf82f64237dad34686e91cd5ec43e9a5f2a9c4d))
+
 ## [2.0.8](https://github.com/netwatching/action.docker.push/compare/v2.0.7...v2.0.8) (2023-11-25)
 
 
