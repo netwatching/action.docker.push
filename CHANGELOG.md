@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.2.0](https://github.com/netwatching/action.docker.push/compare/v2.1.4...v2.2.0) (2023-11-25)
+
+
+### Features
+
+* Add cache ([e472bb5](https://github.com/netwatching/action.docker.push/commit/e472bb5344b9abdcc72ee422b91bcb7c5d62ee81))
+
+
+### Bug Fixes
+
+* Push iamge from tag ([eb012d8](https://github.com/netwatching/action.docker.push/commit/eb012d8f739453429e3ff94369ef42d67a745d6a))
+
 ## [2.1.4](https://github.com/netwatching/action.docker.push/compare/v2.1.3...v2.1.4) (2023-11-25)
 
 
