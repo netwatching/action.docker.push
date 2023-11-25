@@ -78,7 +78,7 @@ runs:
       shell: bash
       run: |
         mkdir -p /tmp/digests
-        digest="${{ steps.build.outputs.digest }}"
+        digest="${{ steps.build-tag.outputs.digest }}"
         touch "/tmp/digests/${digest#sha256:}"      
 
     - name: Upload digest
