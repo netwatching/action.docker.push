@@ -62,7 +62,7 @@ runs:
         outputs: type=image,name=${{ inputs.registry }}/${{ inputs.name }},push-by-digest={{ inputs.push }},name-canonical=true,push=${{ inputs.push }}
 
     - name: Export digest
-      if: inputs.push == 'true'
+      if: ${{ inputs.push == 'true' }}
       shell: bash
       run: |
         mkdir -p /tmp/digests
@@ -70,7 +70,7 @@ runs:
         touch "/tmp/digests/${digest#sha256:}"      
 
     - name: Upload digest
-      if: inputs.push == 'true'
+      if: ${{ inputs.push == 'true' }}
       uses: actions/upload-artifact@v3
       with:
         name: digests
