@@ -11,8 +11,7 @@ inputs:
     required: true
   registry_username:
     description: "Docker registry username"
-    required: false
-    default: ${{ github.actor }}
+    required: true
   registry_password:
     description: "Docker registry password"
     required: true
