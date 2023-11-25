@@ -56,6 +56,8 @@ runs:
         context: .
         platforms: ${{ inputs.arch }}
         labels: ${{ steps.meta.outputs.labels }}
+        cache-from: type=gha
+        cache-to: type=gha,mode=max
         push: false
 
     - name: Build for tag
@@ -67,6 +69,8 @@ runs:
         platforms: ${{ inputs.arch }}
         labels: ${{ steps.meta.outputs.labels }}
         outputs: type=image,name=${{ inputs.registry }}/${{ inputs.name }},push-by-digest=true,name-canonical=true,push=true
+        cache-from: type=gha
+        cache-to: type=gha,mode=max
         push: true
 
     - name: Export digest
