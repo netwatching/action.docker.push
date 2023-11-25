@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.1](https://github.com/netwatching/action.docker.push/compare/v2.0.0...v2.0.1) (2023-11-25)
+
+
+### Bug Fixes
+
+* Registry actor ([593baab](https://github.com/netwatching/action.docker.push/commit/593baabb52a5915e5682d8e91670b1d6b3c24563))
+
 ## [2.0.0](https://github.com/netwatching/action.docker.push/compare/v1.1.0...v2.0.0) (2023-11-25)
 
 
