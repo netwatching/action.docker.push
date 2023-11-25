@@ -59,7 +59,7 @@ runs:
         context: .
         platforms: ${{ inputs.arch }}
         labels: ${{ steps.meta.outputs.labels }}
-        outputs: type=image,name=${{ inputs.registry }}/${{ inputs.name }},push-by-digest={{ inputs.push }},name-canonical=true,push=${{ inputs.push }}
+        outputs: type=image,name=${{ inputs.registry }}/${{ inputs.name }},push-by-digest=${{ inputs.push }},name-canonical=true,push=${{ inputs.push }}
 
     - name: Export digest
       if: ${{ inputs.push == 'true' }}
