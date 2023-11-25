@@ -20,10 +20,6 @@ inputs:
     description: "Docker image arch"
     required: false
     default: 'linux/amd64'
-  push:
-    description: "Push the image"
-    required: false
-    default: "true"
 
 runs:
   using: composite
@@ -52,18 +48,29 @@ runs:
         username: ${{ inputs.registry_username }}
         password: ${{ inputs.registry_password }}
 
-    - name: Build and push by digest
-      id: build
+    - name: Build for branch
+      id: build-branch
+      if: github.ref_type != 'tag'
       uses: docker/build-push-action@v5
       with:
         context: .
         platforms: ${{ inputs.arch }}
         labels: ${{ steps.meta.outputs.labels }}
-        outputs: type=image,name=${{ inputs.registry }}/${{ inputs.name }},push-by-digest=${{ inputs.push }},name-canonical=true,push=${{ inputs.push }}
-        push: ${{ inputs.push }}
+        push: false
+
+    - name: Build for tag
+      id: build-tag
+      if: github.ref_type == 'tag'
+      uses: docker/build-push-action@v5
+      with:
+        context: .
+        platforms: ${{ inputs.arch }}
+        labels: ${{ steps.meta.outputs.labels }}
+        outputs: type=image,name=${{ inputs.registry }}/${{ inputs.name }},push-by-digest=true,name-canonical=true,push=true
+        push: true
 
     - name: Export digest
-      if: ${{ inputs.push == 'true' }}
+      if: github.ref_type == 'tag'
       shell: bash
       run: |
         mkdir -p /tmp/digests
@@ -71,7 +78,7 @@ runs:
         touch "/tmp/digests/${digest#sha256:}"      
 
     - name: Upload digest
-      if: ${{ inputs.push == 'true' }}
+      if: github.ref_type == 'tag'
       uses: actions/upload-artifact@v3
       with:
         name: digests
