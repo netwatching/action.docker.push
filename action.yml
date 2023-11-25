@@ -5,13 +5,14 @@ inputs:
   registry:
     description: "Docker registry"
     required: false
-    default: ghcr.io
+    default: ghcr.io/${{ github.repository_owner }}	
   name:
     description: "Docker image name"
     required: true
   registry_username:
     description: "Docker registry username"
-    required: true
+    required: false
+    default: ${{ github.actor }}
   registry_password:
     description: "Docker registry password"
     required: true
