@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.3](https://github.com/netwatching/action.docker.push/compare/v2.1.2...v2.1.3) (2023-11-25)
+
+
+### Bug Fixes
+
+* Disable push on input ([aecb8b8](https://github.com/netwatching/action.docker.push/commit/aecb8b82a16c6cceb497b0b4ffc63d3d18480606))
+
 ## [2.1.2](https://github.com/netwatching/action.docker.push/compare/v2.1.1...v2.1.2) (2023-11-25)
 
 
