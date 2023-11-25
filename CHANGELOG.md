@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.3](https://github.com/netwatching/action.docker.push/compare/v2.0.2...v2.0.3) (2023-11-25)
+
+
+### Bug Fixes
+
+* Registry ([44976c6](https://github.com/netwatching/action.docker.push/commit/44976c66c975312ac97a3da3c75303ed817c4041))
+
 ## [2.0.2](https://github.com/netwatching/action.docker.push/compare/v2.0.1...v2.0.2) (2023-11-25)
 
 
