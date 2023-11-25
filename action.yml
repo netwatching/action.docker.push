@@ -32,14 +32,6 @@ runs:
       uses: docker/metadata-action@v5
       with:
         images: name=${{ inputs.registry }}/${{ inputs.name }}
-        flavor: | 
-          latest=auto
-        tags: |
-          type=schedule
-          type=ref,event=branch
-          type=ref,event=pr
-          type=semver,pattern={{version}}
-          type=sha
 
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v3
@@ -63,7 +55,6 @@ runs:
         context: .
         platforms: ${{ inputs.arch }}
         labels: ${{ steps.meta.outputs.labels }}
-        # tags: ${{ steps.meta.outputs.tags }}
         outputs: type=image,name=${{ inputs.registry }}/${{ inputs.name }},push-by-digest=true,name-canonical=true,push=true
 
     - name: Export digest
