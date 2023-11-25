@@ -63,7 +63,7 @@ runs:
         context: .
         platforms: ${{ inputs.arch }}
         labels: ${{ steps.meta.outputs.labels }}
-        tags: ${{ steps.meta.outputs.tags }}
+        # tags: ${{ steps.meta.outputs.tags }}
         outputs: type=image,name=${{ inputs.registry }}/${{ inputs.name }},push-by-digest=true,name-canonical=true,push=true
 
     - name: Export digest
