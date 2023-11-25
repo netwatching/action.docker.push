@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.4](https://github.com/netwatching/action.docker.push/compare/v2.1.3...v2.1.4) (2023-11-25)
+
+
+### Bug Fixes
+
+* Build for branches ([eb1ad03](https://github.com/netwatching/action.docker.push/commit/eb1ad038d5a980eaebfdb48099295a85cde18eec))
+
 ## [2.1.3](https://github.com/netwatching/action.docker.push/compare/v2.1.2...v2.1.3) (2023-11-25)
 
 
