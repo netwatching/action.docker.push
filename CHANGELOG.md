@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.1](https://github.com/netwatching/action.docker.push/compare/v2.1.0...v2.1.1) (2023-11-25)
+
+
+### Bug Fixes
+
+* Export digest on release ([87ab71e](https://github.com/netwatching/action.docker.push/commit/87ab71e6d8d57f583f6c62e012bdbadce1122b7a))
+
 ## [2.1.0](https://github.com/netwatching/action.docker.push/compare/v2.0.9...v2.1.0) (2023-11-25)
 
 
