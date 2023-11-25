@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.8](https://github.com/netwatching/action.docker.push/compare/v2.0.7...v2.0.8) (2023-11-25)
+
+
+### Bug Fixes
+
+* Meta output ([fbeff93](https://github.com/netwatching/action.docker.push/commit/fbeff9389110697c00ec3c23a5e83e79487a8faa))
+
 ## [2.0.7](https://github.com/netwatching/action.docker.push/compare/v2.0.6...v2.0.7) (2023-11-25)
 
 
