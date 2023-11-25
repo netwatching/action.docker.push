@@ -61,7 +61,7 @@ runs:
       uses: docker/build-push-action@v5
       with:
         context: .
-        platforms: ${{ matrix.platform }}
+        platforms: ${{ inputs.arch }}
         labels: ${{ steps.meta.outputs.labels }}
         outputs: type=image,name=${{ inputs.registry }},push-by-digest=true,name-canonical=true,push=true
 
