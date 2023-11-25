@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.4](https://github.com/netwatching/action.docker.push/compare/v2.0.3...v2.0.4) (2023-11-25)
+
+
+### Bug Fixes
+
+* Typo in arch ([d788fa2](https://github.com/netwatching/action.docker.push/commit/d788fa2c1c27b4f3d6e86dfe7fc63df8365eb075))
+
 ## [2.0.3](https://github.com/netwatching/action.docker.push/compare/v2.0.2...v2.0.3) (2023-11-25)
 
 
