@@ -3,26 +3,21 @@ description: "Docker build & push"
 
 inputs:
   registry:
-    description: "Docker registry to which the images will be pushed."
+    description: "Docker registry"
     required: false
     default: ghcr.io
   name:
-    description: "Name of the Docker image."
+    description: "Docker image name"
     required: true
   registry_username:
-    description: "Username for image registry."
+    description: "Docker registry username"
     required: false
     default: ${{ github.actor }}
-  registry_token:
-    description: "Token for image registry."
-    required: false
-    default: ${{ secrets.GITHUB_TOKEN }}
-  latest:
-    description: "Set to true if this build should be used as the latest image. Defaults to auto. Set to either true, false or auto."
-    required: false
-    default: auto
+  registry_password:
+    description: "Docker registry password"
+    required: true
   arch:
-    description: "Architectures to push to the Docker reqistry."
+    description: "Docker image arch"
     required: false
     default: 'linux/amd64'
 
@@ -38,7 +33,7 @@ runs:
       with:
         images: name=${{ inputs.registry }}/${{ inputs.name }}
         flavor: | 
-          latest=${{ inputs.latest }}
+          latest=auto
         tags: |
           type=schedule
           type=ref,event=branch
@@ -59,7 +54,7 @@ runs:
       with:
         registry: ${{ inputs.registry }}
         username: ${{ inputs.registry_username }}
-        password: ${{ inputs.registry_token }}
+        password: ${{ inputs.registry_password }}
 
     - name: Build and push by digest
       id: build
